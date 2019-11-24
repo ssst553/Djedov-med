@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+body {
+    background-image: url('../img/background.jpg');
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.6em;
+    color: beige;
+}
+
+/* POCETNA MENI */
+
+.main-nav {
+    background: #f1730c;
+    /*border-radius: 3px;*/
+    font-family: sans-serif;
+    position: sticky;
+    top: 0;
+}
+
+.main-nav > ul {
+    height: 100%;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 175px auto 75px 75px 75px 20px;
+    list-style-type: none;
+}
+
+.main-nav > ul > li {
+    display: grid;
+    justify-content: end;
+    align-content: center;
+}
+
+.main-nav > ul > li:first-child {
+    justify-self: end;
+}
+
+.main-nav a {
+    color: #444;
+    font-size: 16px;
+}
+
+.main-nav a:hover {
+    color: #000;
+}
+
+.main-nav a::before {
+    content: '';
+    display: grid;
+    height: 5px;
+    background-color: #444;
+    position: relative;
+    top: 0;
+    transition: all ease-in-out 250ms;
+    width: 0;
+}
+
+.main-nav a:hover::before {
+    width: 100%;
+}
+
+#menu-title > a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 2em;
+    color: white;
+}
+
+header h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 3em;
+    padding: 28px 0 30px 0;
+}
+
+/* FOOTER */
+
+footer {
+    color: white;
+    display: grid;
+    justify-content: center;
+    grid-gap: 150px;
+    grid-template-columns: auto auto;
+    background: #f1730c;
+}
+
+#footer-levo {
+    align-self: center;
+}
+
+#footer-desno {
+    align-self: center;
+}

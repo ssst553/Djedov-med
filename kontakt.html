@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Đedov med</title>
+
+    <!-- Nas css -->
+    <link rel="stylesheet" type="text/css" href="css/style-novi.css"/>
+    <link rel="stylesheet" type="text/css" href="css/kontakt.css" />
+
+    <!-- CSS za kalendar -->
+    <link rel="stylesheet" href="css/jquery-pseudo-ripple.css">
+    <link rel="stylesheet" href="css/jquery-nao-calendar.css">
+
+    <!-- Ucitavamo jquery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Js za formu -->
+    <script type="text/javascript" src="js/form.js"></script>
+
+</head>
+<body>
+
+<div id="wrap">
+
+    <nav class="main-nav">
+        <ul>
+            <li id="menu-title"><a href="#">Đedov med</a></li>
+            <li><a href="pocetna.html">Početna</a></li>
+            <li><a href="onama.html">O nama</a></li>
+            <li><a href="proizvodi.html">Proizvodi</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+
+    </nav>
+    <header>
+        <div id="kontakt-header">
+            <h1>Đedov med  |  Kontakt</h1>
+        </div>
+    </header>
+
+    <div id="kontakt-sredina">
+        <div id="kontakt-levo">
+            <form class="moja-forma" method="POST" name="forma">
+                <p><strong> Ukoliko imate dodatnih pitanja molimo vas da nas kontaktirate!</strong></p>
+                <div class="form-group">
+                    <label for="ime"> Ime: </label>
+                    <span id="greskaIme"></span>
+                    <input id="ime" name="ime" placeholder="Unesite vaše ime" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="prezime"> Prezime: </label>
+                    <span id="greskaPrezime"></span>
+                    <input id="prezime" name="prezime" placeholder="Unesite vaše prezime" type="text">
+                </div>
+
+                <div class="form-group">
+                    <label for="email"> E-mail: </label>
+                    <span id="greskaEmail"></span>
+                    <input id="email" name="email" placeholder="Unesite vaš e-email" type="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="poruka">Poruka: </label>
+                    <span id="greskaPoruka"></span>
+                    <textarea id="poruka" name="poruka" placeholder="Unesite vaš komentar ili poruku"> </textarea>
+
+                </div>
+                <br>
+
+                <input class="button" name="submit" onclick="slanje()" type="button" value="Pošalji">
+
+            </form>
+        </div>
+
+        <div id="kontakt-desno">
+
+            <div class="myCalendar" style="background-color: white; color: rgb(224, 206, 43)"></div>
+
+           
+            <script src="js/jquery-pseudo-ripple.js"></script>
+            <script src="js/jquery-nao-calendar.js"></script>
+            <script>
+                $('.myCalendar').calendar({
+                    date: new Date(),
+                    autoSelect: false, // false by default
+                    hideYearPicker: true
+                });
+            </script>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-levo">
+            <img src="img/logo.png" alt="logo" id="slikafuter">
+        </div>
+        <div id="footer-desno">
+            <p>Đedov med DOO</p>
+            <p>Telefon:+3812222222</p>
+            <p>email: djedovmed@gmail.com</p>
+            <p>Tanjević dizajn, Copyright &copy; 2019</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

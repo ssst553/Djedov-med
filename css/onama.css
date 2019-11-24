@@ -1,0 +1,90 @@
+#wrap {
+    display: grid;
+    grid-template-rows: 4em 400px 70% auto;
+}
+
+header {
+    background-image: url('../img/buba.jpg');
+    color: white;
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#header-opis {
+    align-self: center;
+    justify-self: center;
+}
+
+#sredina {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.sredina-dete-tekst {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    color: rgb(160, 107, 9);
+    border: 5px solid #885c0a;
+    box-sizing: border-box;
+    width: 90%;
+    padding: 10px;
+    margin: 20px;
+}
+
+.sredina-dete-slika-dva{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-self: center;
+    align-self: center;
+}
+
+.sredina-dete-slika-cetiri{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-self: center;
+    align-self: center;
+}
+
+#sredina img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .sredina-dete-tekst, .sredina-dete-slika-dva, .sredina-dete-slika-cetiri {
+        grid-template-rows: auto;
+        grid-template-columns: 80%;
+        grid-row-gap: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        justify-content: start;
+    }
+
+    .sredina-dete-tekst{
+        width: 40%;
+        place-content: start;
+        justify-self: start;
+    }
+}
+
+@media (max-width: 300px) {
+    header {
+        grid-template-columns: 20%;
+        justify-content: start;
+    }
+    footer {
+        grid-template-columns: 50%;
+        justify-content: start;
+        grid-gap: 0;
+    }
+}

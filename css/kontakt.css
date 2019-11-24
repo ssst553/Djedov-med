@@ -1,0 +1,76 @@
+#wrap {
+    display: grid;
+    grid-template-rows: 4em 400px 70% auto;
+}
+
+header {
+    background-image: url('../img/kasikaUMedu.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: white;
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+}
+
+#kontakt-header {
+    align-self: center;
+}
+
+#kontakt-sredina {
+    background-color: white;
+    color: rgb(224, 206, 43);
+    border: 5px solid #885c0a;
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template-columns: 70% 30%;
+}
+
+#kontakt-levo, #kontakt-desno {
+    align-self: center;
+    justify-self: center;
+}
+
+.moja-forma label {
+    display: block;
+}
+
+.moja-forma input[type="text"], .moja-forma textarea {
+    padding: 8px;
+    width: 90%;
+}
+
+@media (max-width: 768px) {
+    #kontakt-sredina {
+        grid-template-rows: auto auto;
+        grid-template-columns: 60%;
+        place-content: start start;
+    }
+}
+@media (max-width: 500px) {
+    header {
+        justify-content: start;
+    }
+}
+
+@media (max-width: 300px) {
+    header {
+        grid-template-columns: 20%;
+        justify-content: start;
+    }
+
+    footer {
+        grid-template-columns: 50%;
+        justify-content: start;
+        grid-gap: 0;
+    }
+}
+
+.myCalendar {
+    border: 5px solid #885c0a;
+    box-sizing: border-box;
+    border-radius: 5px;
+}

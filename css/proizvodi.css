@@ -1,0 +1,78 @@
+#wrap {
+    display: grid;
+    grid-template-rows: 4em 400px 70% auto;
+}
+
+header {
+    background-image: url('../img/honey_base2.jpg');
+    color: white;
+    display: grid;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template-columns: auto auto;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+#header-opis {
+    align-self: center;
+    justify-self: center;
+}
+
+#sredina-galerija {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.galerija {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    justify-self: center;
+    align-self: center;
+    grid-gap: 5px;
+    margin: 10px;
+    width:80%;
+}
+
+img {
+    width: 100%;
+}
+.cena{
+    color: orange;
+}
+
+
+@media (max-width: 768px) {
+/*    #wrap {
+        display: grid;
+        grid-template-rows: 4em 300px 70% auto;
+    }*/
+    .galerija {
+        grid-template-rows: auto;
+        grid-template-columns: 80%;
+        grid-row-gap: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .galerija img {
+        width: 60%;
+    }
+    header {
+        justify-content: start;
+    }
+    #header-opis {
+        width: 20%;
+        justify-self: start;
+    }
+}
+
+@media(max-width: 300px) {
+    footer {
+        grid-template-columns: 50%;
+        justify-content: start;
+        grid-gap: 0;
+    }
+}
